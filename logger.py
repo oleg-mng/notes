@@ -23,7 +23,7 @@ def time_logger():
         file.write(dt.strftime(dt.now(), '%m/%d/%Y %H:%M, '))
         file.write(x)
         file.write('\n')
-        #'%Y - %m - %d - %H - %m'
+        
 
 
 

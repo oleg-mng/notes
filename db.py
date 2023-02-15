@@ -7,6 +7,7 @@ def find_in_db(r):
             nums = data.readline()
             for nums in data:
                 if r in nums:
+                    print('Данная заметка найдена: ')
                     print(nums.strip())
                     # doc = aw.Document('directory.txt')
                     # doc.save('name.pdf')
