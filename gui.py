@@ -17,6 +17,7 @@ def get_value_surname():
 def get_value_mobile():
     global mobile
     mobile = str(input('Введите тег: '))
+    print('Заметка успешно сохранена')
     return mobile
 
 
@@ -27,7 +28,7 @@ def type_of_operation():
 
 def var_of_operation():
     global var
-    var = input('какую операцию вы хотите сделать в справочнике (w/r)?: ')
+    var = input('какую операцию вы хотите сделать в справочнике (w/r/f)?: ')
     # if op == 'w':
     #     var = math_f.write()
     # elif op == 'r':
