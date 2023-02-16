@@ -1,12 +1,12 @@
 import controller
 # import aspose.words as aw
 
-def find_in_db(r):
+def find_in_db(f):
     # global name
     with open('notes.csv', 'r') as data:
             nums = data.readline()
             for nums in data:
-                if r in nums:
+                if f in nums:
                     print('Данная заметка найдена: ')
                     print(nums.strip())
                     # doc = aw.Document('directory.txt')

@@ -8,17 +8,17 @@ def get_value_name():
     return name
 
 
-def get_value_surname():
-    global surname
-    surname = str(input('Введите тело заметки: '))
-    return surname
+def get_value_body():
+    global body
+    body = str(input('Введите тело заметки: '))
+    return body
 
 
-def get_value_mobile():
-    global mobile
-    mobile = str(input('Введите тег: '))
+def get_value_teg():
+    global teg
+    teg = str(input('Введите тег: '))
     print('Заметка успешно сохранена')
-    return mobile
+    return teg
 
 
 def type_of_operation():
