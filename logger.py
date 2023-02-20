@@ -18,10 +18,21 @@ def write():
         data.write(x+', '+y+', '+q)
         data.write('\n')
 
+def rewrite(f):
+    with open('notes.csv', 'w') as data:
+        nums = data.writelines()
+        for nums in data:
+                if f in nums:
+                    data.write(x+', '+y+', '+q)
+                    data.write('\n')
+
+
 def time_logger():
     with open('log.csv', 'a') as file:
         file.write(dt.strftime(dt.now(), '%m/%d/%Y %H:%M, '))
-        file.write(x)
+        file.write(x+', '+y+', '+q)
+        # file.write(y)
+        # file.write(q)
         file.write('\n')
         
 
