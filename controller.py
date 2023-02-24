@@ -18,7 +18,7 @@ def button_click():
         result = gui.type_of_operation()
 
     elif type=='r':
-        with open('log.csv', encoding='utf-8') as file:
+        with open('notes.csv', encoding='utf-8') as file:
             # file_reader = csv.reader(file, delimiter = ",")
             csv = file.read().splitlines()
             # sorted(csv)
@@ -30,6 +30,10 @@ def button_click():
     elif type=='f':
         name = gui.get_value_name()
         db.find_in_db(name)
+        # db.find_in_db_write(name)
+         
+        # logger.init(name, body, teg)
+        # logger.rewrite()
         
 
 

@@ -46,7 +46,7 @@ def note_overwriting():
         logger.init(name, body, teg)
         logger.time_logger()
         #result = type_of_operation()
-        logger.rewrite()
+        # logger.rewrite()
         # logger.time_logger()
     elif over == 'n':
         exit

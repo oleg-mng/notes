@@ -27,8 +27,8 @@ def rewrite():
         data.write(x+', '+y+', '+q)
         data.write('\n')
  
-        # input = open('notes.csv', 'rb')
-        # output = open('notesTemp.csv, 'wb')
+        # input = open('notes.csv', 'r')
+        # output = open('notesTemp.csv, 'w')
         # writer = csv.writer(output)
         
         # for row in csv.reader(input):
@@ -46,8 +46,3 @@ def time_logger():
         # file.write(y)
         # file.write(q)
         file.write('\n')
-        
-
-
-
-
