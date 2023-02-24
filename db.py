@@ -1,6 +1,7 @@
 import controller
 import gui
 import logger
+import csv
 # import aspose.words as aw
 
 def find_in_db(f):
@@ -13,36 +14,32 @@ def find_in_db(f):
                     print('Данная заметка найдена: ')
                     print(nums.strip())
                     count +=1
-                    #gui.note_overwriting()
-                    #logger.rewrite(x, y, z)
+                    gui.note_overwriting()
+                    result = logger.rewrite()
                     #name = gui.get_value_name()
                     #body = gui.get_value_body()
                     #teg = gui.get_value_teg()
-            if count==0 : print('Данная заметка не найдена')
+                if count==0 : print('Данная заметка не найдена')
                 
-                
-
 def find_in_db_write(f):
     # global name
-    with open('notes.csv', 'a') as data:
+    with open('notesTemp.csv', 'w') as data:
             nums = data.readline()
             for nums in data:
                 if f in nums:
                     nums.write()
+
+    input = open('notes.csv', 'rb')
+    output = open('notesTemp.csv', 'wb')
+    writer = csv.writer(output)
+        
+    for row in csv.reader(input):
+        if f in row:
+            writer.writerow(f)
+        
+    input.close()
+    output.close()
                     
 
-# def print_pdf:
-#     pdf_document = "source/YourFile.pdf"
-#     with open(pdf_document, "rb") as filehandle:
-#     pdf = PdfFileReader(filehandle)
-#     info = pdf.getDocumentInfo()
-#     pages = pdf.getNumPages()
-#     print("Количество страниц в документе: %i\n\n" % pages)
-#     print("Мета-описание: ", info)
-#     for i in range(pages):
-#     page = pdf.getPage(i)
-#     print("Стр.", i, " мета: ", page, "\n\nСодержание;\n")
-#     print(page.extractText())
-            
             
                 

@@ -1,5 +1,6 @@
 from datetime import datetime as dt
 from time import time
+import csv
 
 x = 0
 y = 0
@@ -18,13 +19,24 @@ def write():
         data.write(x+', '+y+', '+q)
         data.write('\n')
 
-def rewrite(f):
-    with open('notes.csv', 'w') as data:
-        nums = data.writelines()
-        for nums in data:
-                if f in nums:
-                    data.write(x+', '+y+', '+q)
-                    data.write('\n')
+def rewrite():
+    with open('notesTemp.csv', 'w') as data:
+        # nums = data.writelines()
+        # for nums in data:
+        #         if f in nums:
+        data.write(x+', '+y+', '+q)
+        data.write('\n')
+ 
+        # input = open('notes.csv', 'rb')
+        # output = open('notesTemp.csv, 'wb')
+        # writer = csv.writer(output)
+        
+        # for row in csv.reader(input):
+        #     if (row[6] and row[7] and row[8]) != '0':
+        #         writer.writerow(row)
+        
+        # input.close()
+        # output.close()
 
 
 def time_logger():

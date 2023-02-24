@@ -1,25 +1,21 @@
 import db
 import logger
 
-
 def get_value_name():
     global name
     name = str(input('Введите заголовок заметки:  '))
     return name
-
 
 def get_value_body():
     global body
     body = str(input('Введите тело заметки: '))
     return body
 
-
 def get_value_teg():
     global teg
     teg = str(input('Введите тег: '))
     print('Заметка успешно сохранена')
     return teg
-
 
 def type_of_operation():
     global result
@@ -49,10 +45,9 @@ def note_overwriting():
         teg = get_value_teg()
         logger.init(name, body, teg)
         logger.time_logger()
-        result = type_of_operation()
-
-        # logger.write()
+        #result = type_of_operation()
+        logger.rewrite()
         # logger.time_logger()
     elif over == 'n':
-         exit
+        exit
     return over
