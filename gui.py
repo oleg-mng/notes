@@ -45,18 +45,29 @@ def note_overwriting(s):
         with open('notes.csv', 'r') as file:
             with open('notesTemp.csv', 'w') as data:
                 nums = file.readline()
+                data.write('\n')
                 for nums in file:
                     if s in nums:
+                        # data.write('\n')
                         # print(nums.strip())
-                        k = name+', '+body+', '+teg
+                        # k = name+', '+body+', '+teg
                         data.write(name+', '+body+', '+teg)
+                        data.write('\n')
                         # print(k)
                         continue
                     data.write(nums)
-                    data.write('\n')
                     # print(nums)
         print('изменения в db внесены')
 
+        with open('notesTemp.csv', 'r') as file:
+            with open('notes.csv', 'w') as data:
+                nums = file.readline()
+                data.write('\n')
+                for nums in file:
+                    data.write(nums)
+                    # data.write('\n')
+            
+                    
         logger.time_logger()
         
     elif over == 'n':
