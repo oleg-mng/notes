@@ -38,11 +38,8 @@ def rewrite():
         # input.close()
         # output.close()
 
-
 def time_logger():
     with open('log.csv', 'a') as file:
         file.write(dt.strftime(dt.now(), '%m/%d/%Y %H:%M, '))
         file.write(x+', '+y+', '+q)
-        # file.write(y)
-        # file.write(q)
         file.write('\n')

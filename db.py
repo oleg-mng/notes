@@ -6,6 +6,8 @@ import csv
 
 def find_in_db(f):
     # global name
+    global s
+    s = f
     with open('notes.csv', 'r') as data:
             count = 0
             nums = data.readline()
@@ -14,10 +16,7 @@ def find_in_db(f):
                     print('Данная заметка найдена: ')
                     print(nums.strip())
                     count +=1
-                    gui.note_overwriting()
+                    gui.note_overwriting(s)
                     # result = logger.rewrite()
-                    #name = gui.get_value_name()
-                    #body = gui.get_value_body()
-                    #teg = gui.get_value_teg()
             if count==0 : print('Данная заметка не найдена')
                 

@@ -7,6 +7,7 @@ def button_click():
     global name
     global body
     global teg
+    global s
     type=gui.var_of_operation()
 
     if type=='w':
@@ -22,7 +23,7 @@ def button_click():
             # file_reader = csv.reader(file, delimiter = ",")
             csv = file.read().splitlines()
             # sorted(csv)
-            csv.sort()
+            # csv.sort()
             # count = 0
             for row in csv:
                 print(row)
@@ -30,10 +31,6 @@ def button_click():
     elif type=='f':
         name = gui.get_value_name()
         db.find_in_db(name)
-        # db.find_in_db_write(name)
-         
-        # logger.init(name, body, teg)
-        # logger.rewrite()
         
 
 
